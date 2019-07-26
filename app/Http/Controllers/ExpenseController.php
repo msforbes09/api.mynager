@@ -18,7 +18,7 @@ class ExpenseController extends Controller
             ->select('date', DB::raw('sum(amount) as amount'))
             ->groupBy('date')
             ->orderBy($sort, $order)
-            ->paginate($request->get('rowsPerPage'));
+            ->paginate($request->get('itemsPerPage'));
     }
 
     public function store(Request $request)
