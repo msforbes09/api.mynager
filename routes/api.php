@@ -1,6 +1,8 @@
 <?php
 
 Route::post('/login', 'AuthController@login');
+Route::post('/password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
+Route::post('/password/reset', 'Auth\ResetPasswordController@reset');
 
 Route::middleware(['auth:api'])->group(function() {
     Route::post('/logout', 'AuthController@logout');
