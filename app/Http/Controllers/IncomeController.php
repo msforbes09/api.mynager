@@ -10,7 +10,7 @@ class IncomeController extends Controller
 {
     public function index(Request $request)
     {
-        $sort = $request->get('sortBy')[0];
+        $sort = $request->get('sortBy')[0] ? $request->get('sortBy')[0]: 'id';
         $order = $request->get('sortDesc')[0] ? 'desc' : 'asc';
 
         return $incomes = Auth::user()->incomes()
