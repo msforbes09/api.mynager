@@ -1,8 +1,8 @@
 /node_modules
 /public/hot
 /public/storage
-/public/avatar/*
-!/public/avatar/default.jpg
+# /public/avatar/*
+# !/public/avatar/default.jpg
 /storage/*.key
 /vendor
 .env
